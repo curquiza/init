@@ -1,1 +1,1 @@
-route -n get default | grep gateway
+route get default | grep gateway
