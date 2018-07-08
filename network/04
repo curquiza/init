@@ -1,1 +1,2 @@
 route get default | grep gateway
+# routing tables : netstat -rn
