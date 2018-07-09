@@ -1,0 +1,15 @@
+#!/bin/bash
+
+file=/var/log/update_script.log
+
+date >> $file
+echo '--- SOURCES - apt-get update -----' >> $file
+apt-get update >> $file
+echo '--- PACKAGES - apt-get upgrade ---' >> $file
+apt-get upgrade >> $file
+echo >> $file
+
+# add cron
+# crontab -e
+# add line : 0 4 * * 5 /home/curquiza/Documents/init/scripts/02
+# (every friday)
