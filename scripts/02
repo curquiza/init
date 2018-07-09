@@ -2,12 +2,12 @@
 
 file=/var/log/update_script.log
 
-date >> $file
-echo '--- SOURCES - apt-get update -----' >> $file
-apt-get update >> $file
-echo '--- PACKAGES - apt-get upgrade ---' >> $file
-apt-get upgrade >> $file
-echo >> $file
+date >> $file 2>&1
+echo '--- SOURCES - apt-get update -----' >> $file 2>&1
+apt-get update >> $file 2>&1
+echo '--- PACKAGES - apt-get upgrade ---' >> $file 2>&1
+apt-get upgrade >> $file 2>&1
+echo >> $file 2>&1
 
 # to execute in root
 
