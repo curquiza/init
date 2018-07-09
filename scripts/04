@@ -1,0 +1,15 @@
+#!/bin/bash
+
+md5file=crontab.md5
+
+if [ ! -f $md5file ]; then
+	md5sum /etc/crontab > $md5file
+fi
+md5sum --status -c $md5file
+if [ 0 -ne $? ]; then
+	echo 'Warning : /etc/crontab has been modified.' | mail -s 'crontab modification' root
+	md5sum /etc/crontab > $md5file
+fi
+
+# crontab -e :
+# 0 0 * * * ~/Documents/init/scripts/05 
