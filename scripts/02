@@ -13,5 +13,5 @@ echo >> $file 2>&1
 
 # add cron (as root)
 # crontab -e
-# add line : 0 4 * * 5 /home/curquiza/Documents/init/scripts/02
+# add line : 0 4 * * 5 /home/curquiza/init/scripts/02
 # (every friday)
