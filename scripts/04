@@ -12,4 +12,4 @@ if [ 0 -ne $? ]; then
 fi
 
 # crontab -e :
-# 0 0 * * * ~/Documents/init/scripts/05 
+# 0 0 * * * /home/curquiza/init/scripts/05
