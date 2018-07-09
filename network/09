@@ -1,9 +1,13 @@
-Name:	42.fr
-Address: 10.52.1.76
-Name:	42.fr
-Address: 10.52.1.11
-Name:	42.fr
-Address: 10.52.1.12
+nslookup 42.fr 8.8.8.8
 
-# nslookup 42.fr
-# otherwise : traceroute 42.fr
+# Old and wrong :
+# $> nslookup 42.fr
+# Name:	42.fr
+# Address: 10.52.1.76
+# Name:	42.fr
+# Address: 10.52.1.11
+# Name:	42.fr
+# Address: 10.52.1.12
+
+# 42.fr est hébergé en local, donc nslookup 42.fr ne nous fait pas sortir du reseau et balance l'adresse locale de 42.fr
+# si on fait traceroute 42.fr on voit qu'on ne passe pas par le NAT
