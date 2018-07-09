@@ -9,7 +9,9 @@ echo '--- PACKAGES - apt-get upgrade ---' >> $file
 apt-get upgrade >> $file
 echo >> $file
 
-# add cron
+# to execute in root
+
+# add cron (as root)
 # crontab -e
 # add line : 0 4 * * 5 /home/curquiza/Documents/init/scripts/02
 # (every friday)
